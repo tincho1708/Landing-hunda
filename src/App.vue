@@ -4,6 +4,10 @@ import misionArt from './assets/mision-art.png'
 import vidas from './assets/vidas.png'
 import milo from './assets/milo.jpg'
 import luna from './assets/luna.jpg'
+import historiaMilo from './assets/historia-milo.jpg'
+import historiaLuna from './assets/historia-luna.jpg'
+import historiaRocky from './assets/historia-rocky.jpg'
+import equipo from './assets/equipo.png'
 
 const navLinks = ['Inicio', 'Cómo funciona', 'Plataforma', 'FAQ', 'Contacto']
 const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y versiones', 'Exportar modelos 3D']
@@ -11,14 +15,12 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
 
 <template>
   <div class="min-h-screen overflow-x-hidden font-sans text-white">
-    <!-- ================= HERO ================= -->
     <section
       id="inicio"
       class="relative h-171 bg-cover bg-center"
       :style="{ backgroundImage: `url(${hero})` }"
     >
       <div class="relative mx-auto h-full max-w-360">
-        <!-- Navbar -->
         <header class="absolute inset-x-0 top-0 flex items-start">
           <a href="#" class="absolute left-10.75 top-7.5 font-display text-[31px] font-bold tracking-[-0.04em]">hunda.</a>
 
@@ -46,7 +48,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
           </a>
         </header>
 
-        <!-- Hero content -->
         <div class="absolute left-23.5 top-41.5">
           <p class="text-[15px] font-medium uppercase tracking-[0.34em] text-white/95">Que ninguna huella se detenga</p>
           <h1 class="mt-1.5 font-display text-[55.5px] font-semibold leading-16 tracking-[-0.045em]">
@@ -98,7 +99,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
       </div>
     </section>
 
-    <!-- ================= MISIÓN ================= -->
     <section class="relative h-127.5 bg-[linear-gradient(90deg,#2d4741_0%,#334845_55%,#374647_100%)]">
       <div class="dots absolute inset-0"></div>
       <div class="relative mx-auto h-full max-w-360">
@@ -131,14 +131,12 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
       </div>
     </section>
 
-    <!-- ================= PLATAFORMA ================= -->
     <section
       id="plataforma"
       class="relative h-165 border-t border-white/10 bg-[linear-gradient(180deg,#545b5d_0%,#625c67_45%,#5f5a64_75%,#57555d_100%)]"
     >
       <div class="dots absolute inset-0 opacity-70"></div>
       <div class="relative mx-auto h-full max-w-360">
-        <!-- Left copy -->
         <div class="absolute left-23 top-16">
           <p class="ml-0.75 text-[14px] font-medium uppercase text-white/95">La plataforma</p>
           <h2 class="mt-1.5 font-display text-[39px] font-bold leading-11 tracking-[-0.06em]">
@@ -166,7 +164,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
           </a>
         </div>
 
-        <!-- Dashboard mock -->
         <div
           class="absolute left-129.75 top-15.5 h-136.75 w-206.5 overflow-hidden rounded-[10px] border border-white/35 bg-[linear-gradient(180deg,#5e4a5e_0%,#5a5260_45%,#4c5a57_78%,#3e5a50_100%)] shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
         >
@@ -181,7 +178,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
               + Agregar perro
             </a>
 
-            <!-- Milo -->
             <div class="absolute left-6.25 top-26.75 h-41.75 w-192.5 rounded-md bg-white/9">
               <img :src="milo" alt="Milo" class="absolute left-3 top-3.75 h-34.25 w-34 rounded-[5px] object-cover" />
               <p class="absolute left-43.25 top-5.75 text-[16px] font-medium">Milo</p>
@@ -199,7 +195,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
               </a>
             </div>
 
-            <!-- Luna -->
             <div class="absolute left-6.25 top-73.25 h-41.75 w-192.5 rounded-md bg-white/9">
               <img :src="luna" alt="Luna" class="absolute left-3 top-3.75 h-34.25 w-34 rounded-[5px] object-cover" />
               <p class="absolute left-43.25 top-5.75 text-[16px] font-medium">Luna</p>
@@ -224,7 +219,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
       </div>
     </section>
 
-    <!-- ================= HISTORIAS ================= -->
     <section
       class="relative h-122.5 border-t border-white/10 bg-[radial-gradient(ellipse_at_75%_15%,#4a3a4d_0%,transparent_55%),linear-gradient(160deg,#3b3a44_0%,#3a3844_40%,#393341_70%,#2f3b3b_100%)]"
     >
@@ -249,8 +243,22 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
           </a>
         </div>
 
-        <button class="absolute left-123.5 top-58.75 h-11 w-11 rounded-full bg-white/15" aria-label="Anterior"></button>
-        <button class="absolute left-340.5 top-58.75 h-11 w-11 rounded-full bg-white/15" aria-label="Siguiente"></button>
+        <img :src="historiaMilo" alt="Milo en la playa" class="absolute left-136.5 top-25.5 h-81.25 w-60.25 select-none rounded-[14px]" />
+        <img :src="historiaLuna" alt="Luna caminando" class="absolute left-200.75 top-25.5 h-81.25 w-66.75 select-none rounded-[14px]" />
+        <img :src="historiaRocky" alt="Rocky en el parque" class="absolute left-271.5 top-25.5 h-81.25 w-66.5 select-none rounded-[14px]" />
+
+        <button
+          class="absolute left-123.5 top-58.75 flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/15 text-white/85 transition hover:bg-white/25 hover:text-white"
+          aria-label="Anterior"
+        >
+          <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7" /></svg>
+        </button>
+        <button
+          class="absolute left-340.5 top-58.75 flex h-11 w-11 cursor-pointer items-center justify-center rounded-full bg-white/15 text-white/85 transition hover:bg-white/25 hover:text-white"
+          aria-label="Siguiente"
+        >
+          <svg class="h-4.5 w-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7" /></svg>
+        </button>
 
         <div class="absolute left-228.25 top-110.25 flex items-center gap-0.75">
           <span class="h-3 w-5.75 rounded-full bg-mint"></span>
@@ -260,12 +268,17 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
       </div>
     </section>
 
-    <!-- ================= SOBRE NOSOTROS + CTA ================= -->
     <section class="relative bg-[#2c443f]">
       <div class="dots absolute inset-0"></div>
 
       <div class="relative h-126.25 border-t border-white/10 bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.04)_40%,rgba(255,255,255,0.02)_100%)]">
         <div class="relative mx-auto h-full max-w-360">
+          <img
+            :src="equipo"
+            alt="Benja, Brigitte y Mayte con un perro con prótesis"
+            class="absolute left-192.5 top-2.75 w-130 select-none mask-[linear-gradient(to_right,transparent,black_16px,black_calc(100%-16px),transparent),linear-gradient(to_bottom,transparent,black_16px,black_calc(100%-16px),transparent)] mask-intersect"
+          />
+
           <div class="absolute left-20 top-18.5">
             <p class="text-[16px] font-medium uppercase text-white/95">Sobre nosotros</p>
             <h2 class="mt-2 font-display text-[39.5px] font-bold leading-12 tracking-[-0.065em]">
@@ -324,7 +337,6 @@ const features = ['Crear nuevas prótesis', 'Gestionar diseños', 'Historial y v
       </div>
     </section>
 
-    <!-- ================= FOOTER ================= -->
     <footer id="contacto" class="relative h-69.5 bg-[#040a0b]">
       <div class="relative mx-auto h-full max-w-360 tracking-[-0.02em]">
         <div class="absolute left-27.25 top-17">

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(npx vite *)",
+      "Bash(sed -i -E '/^\\\\s*<!--.*-->\\\\s*$/d' src/App.vue)",
+      "Bash(grep -rn \"/\\\\*\\\\|//\" src/main.js src/style.css index.html vite.config.js)"
+    ]
+  }
+}
